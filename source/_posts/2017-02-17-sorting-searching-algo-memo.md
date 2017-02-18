@@ -1,5 +1,5 @@
 ---
-title: sorting-searching-algo-memo
+title: Sorting and Searching Algorithms cheat sheet
 date: 2017-02-17 08:07:46
 tags:
 ---
