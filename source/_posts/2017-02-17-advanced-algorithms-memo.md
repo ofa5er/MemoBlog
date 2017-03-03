@@ -2,6 +2,9 @@
 title: Random Algorithms cheat sheet
 date: 2017-02-17 08:06:40
 tags:
+  - c++
+  - cheat sheet
+  - algorithms
 comments: true
 ---
 A cheat sheet for some known algortihms
