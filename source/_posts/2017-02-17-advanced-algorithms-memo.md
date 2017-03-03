@@ -1,5 +1,5 @@
 ---
-title: Random Algorithms cheat sheet
+title: Random Algorithms Cheat Sheet
 date: 2017-02-17 08:06:40
 tags:
   - cheat sheet
