@@ -4,6 +4,7 @@ date: 2017-02-17 08:04:46
 tags: 
   - c++
   - cheat sheet
+  - algorithms
 ---
 Basic C++ APIs cheat sheet
 <!-- more -->
