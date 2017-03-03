@@ -1,6 +1,5 @@
 ---
 title: useful-tools-memo
-comments: true
 date: 2017-03-03 06:23:43
 tags:
     - memo
