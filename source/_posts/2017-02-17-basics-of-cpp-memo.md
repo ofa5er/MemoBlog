@@ -1,10 +1,11 @@
 ---
-title: basics-of-cpp-memo
+title: C++ Basics (Cheat sheet)
 date: 2017-02-17 08:04:46
 tags: 
   - c++
   - cheat sheet
   - algorithms
+comments: true
 ---
 Basic C++ APIs cheat sheet
 <!-- more -->
