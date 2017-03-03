@@ -2,6 +2,9 @@
 title: basics-formulas-memo
 date: 2017-02-17 08:06:12
 tags:
+  - cheat sheet
+  - algorithms
+comments: true
 ---
 A memo for some basic formulas
 #Distance between 2 points
