@@ -10,7 +10,6 @@ comments: true
 
 <!-- more -->
 # String
-## Java
 ```java
 String str = "example"
 
