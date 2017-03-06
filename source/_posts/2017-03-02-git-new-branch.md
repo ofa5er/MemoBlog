@@ -1,11 +1,21 @@
 ---
-title: Push a new local branch to a remote Git repository
+title: Git useful tips 
 comments: true
 date: 2017-03-02 21:25:12
 tags:
+ -git
 ---
 <!-- more -->
+# 50 characters or less
+Vim ships with syntax, indent, and filetype plugins for Git commits which can help here.
+Add this line to your `~/.vimrc` to add spell checking and automatic wrapping at the recommended 72 columns to you commit messages.
+```
+autocmd Filetype gitcommit setlocal spell textwidth=72
+```
+# Awsome commit message 
+http://udacity.github.io/git-styleguide/ 
 
+# Push a new local branch to a remote Git repository
 ```
 git checkout -b <sandbox/new_branch_name>
 ```
