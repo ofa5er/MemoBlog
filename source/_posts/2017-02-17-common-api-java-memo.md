@@ -13,7 +13,7 @@ comments: true
 ```java
 String str = "example"
 
-str.chartAt(1); // return x
+str.charAt(1); // return x
 str.equals("example2"); // if !equal return false else true.
 str.compareTo("example2"); // if equal return 0, if less return > 0, if null raise an expcetion
 str.trim(); // remove spaces
