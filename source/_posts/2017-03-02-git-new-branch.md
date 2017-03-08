@@ -15,6 +15,11 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 # Awsome commit message 
 http://udacity.github.io/git-styleguide/ 
 
+# Remove Local Branch
+```
+git branch -d the_local_branch
+```
+
 # Push a new local branch to a remote Git repository
 ```
 git checkout -b <sandbox/new_branch_name>
