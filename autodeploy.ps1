@@ -7,4 +7,5 @@ hexo generate
 cp -r -fo .\public\* .\production\public\
 cd .\production
 npm install -g firebase-tools
+firebase login
 firebase deploy

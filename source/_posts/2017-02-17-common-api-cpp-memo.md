@@ -1,11 +1,12 @@
 ---
-title: Common C++ APIs Memo
+title: Common C++ APIs (Cheat sheet)
 date: 2017-02-17 08:09:05
 tags:
   -c++
   -cheatsheet
 comments: true
 ---
+A CheatSheet for basic C++ APIs
 <!-- more -->
 -------------------------------------------------------
 ## String

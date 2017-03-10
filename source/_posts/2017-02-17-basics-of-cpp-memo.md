@@ -3,7 +3,7 @@ title: C++ Basics (Cheat sheet)
 date: 2017-02-17 08:04:46
 tags: 
   - c++
-  - cheat sheet
+  - cheatsheet
   - algorithms
 comments: true
 ---

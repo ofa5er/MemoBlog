@@ -1,5 +1,5 @@
 ---
-title: Data Structures Implementation using C++
+title: Data Structures Implementations using C++
 date: 2017-02-17 08:05:28
 tags:
   -c++
@@ -7,7 +7,7 @@ tags:
   -data structure
 comments: true
 ---
-
+Common data structures implemented using C++
 <!-- more -->
 ## Data Structures
 -------------------------------------------------------

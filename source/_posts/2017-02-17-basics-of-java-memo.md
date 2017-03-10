@@ -1,14 +1,14 @@
 ---
-title: Java Basics Memo
+title: Java Basics (Cheat sheet)
 date: 2017-02-17 08:04:53
 tags:
  -java
  -cheatsheet
- -memo
+
 comments: true
 ---
+A CheatSheet for Java fundamentals
 <!-- more -->
-
 ```java
 Integer.bitCount()
 Random.nextBoolean(); //random boolean

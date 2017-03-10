@@ -1,10 +1,12 @@
 ---
-title: Git useful tips 
+title: Git CheatSheet
 comments: true
 date: 2017-03-02 21:25:12
 tags:
  -git
+ -cheatsheet
 ---
+A list of Git commands and tips
 <!-- more -->
 # 50 characters or less
 Vim ships with syntax, indent, and filetype plugins for Git commits which can help here.
