@@ -2,8 +2,8 @@
 title: Common C++ APIs (Cheat sheet)
 date: 2017-02-17 08:09:05
 tags:
-  -c++
-  -cheatsheet
+  - c++
+  - cheatsheet
 comments: true
 ---
 A CheatSheet for basic C++ APIs

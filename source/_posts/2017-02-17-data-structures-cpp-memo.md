@@ -2,9 +2,9 @@
 title: Data Structures Implementations using C++
 date: 2017-02-17 08:05:28
 tags:
-  -c++
-  -cheatsheet
-  -data structure
+  - c++
+  - cheatsheet
+  - data structure
 comments: true
 ---
 Common data structures implemented using C++
