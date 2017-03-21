@@ -15,7 +15,8 @@ String str = "example"
 
 str.charAt(1); // return x
 str.equals("example2"); // if !equal return false else true.
-str.compareTo("example2"); // if equal return 0, if less return > 0, if null raise an expcetion
+str.compareTo("example2"); // if equal return 0, if less return > 0, if null raise an excpetion
+str.replace("exam", "t"); // return "tple"
 str.trim(); // remove spaces
 str.toLowerCase();
 str.lenght();

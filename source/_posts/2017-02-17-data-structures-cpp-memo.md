@@ -7,7 +7,7 @@ tags:
   - data structure
 comments: true
 ---
-Common data structures implemented using C++
+ C++ common data structures
 <!-- more -->
 ## Data Structures
 -------------------------------------------------------
