@@ -13,14 +13,7 @@ Common data structures implementation using java
 ## Time Complexity
 | Operation    | Time Complexity |
 |--------------|-----------------|
-| Insert Head  |          `O(n)` |
-| Insert Index |          `O(n)` |
-| Insert Tail  |          `O(1)` |
-| Remove Head  |          `O(n)` |
-| Remove Index |          `O(n)` |
-| Remove Tail  |          `O(1)` |
-| Find Index   |          `O(1)` |
-| Find Object  |          `O(n)` |
+| appendToTail  |          `O(n)` |
 
 ## Java Impelementation
 
