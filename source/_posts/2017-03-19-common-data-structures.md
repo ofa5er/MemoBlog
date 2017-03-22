@@ -15,7 +15,7 @@ Common data structures implementation using java
 |--------------|-----------------|
 | appendToTail  |          `O(n)` |
 
-## Java Impelementation
+## Java Implementation
 
 ```java
 class Node<T> {
@@ -39,8 +39,188 @@ class Node<T> {
 ```
 
 # Stack
+
+## Time Complexity
+
+| Operation    | Time Complexity |
+|--------------|-----------------|
+| pop()              |       O(1)          |
+| push()             |       O(1)          |
+| peek()             |       O(1)          |
+| isEmpty()          |       O(1)          |
+## Java Implementation
+### LinkedList Based
+```java
+class Stack<T> {
+  private static class StackNode<T> {
+    private T data;
+    private StackNode<T> next;
+    public StackNode(T d) {
+      data = t;
+    }
+  }
+  StackNode<T> top;
+  public T pop() {
+      if (top == null) throw new EmptyStackException();
+      T item;
+      item = top.data;
+      top = top.next;
+      return item;
+  }
+
+  public void push(T d) {
+    StackNode<T> item = new StackNode(d);
+    item.next = top;
+    top = item;
+  }
+
+  public T peek() {
+      if (top == null) throw new EmptyStackException();
+      return top.data; 
+  }
+
+  public boolean isEmpty() {
+    return top == null;
+  }
+}
+```
+### Array Based
+```java
+class Stack<T> {
+  private static int SIZE = 4;
+  T[] array;
+  int index = 0;
+
+  public Stack() {
+    array = (T[]) new Object[SIZE]
+  }
+
+  public void push(T d) {
+    if (index == array.length) resize(2 * array.length);
+    top[topIndex++] = d;
+  }
+
+  private void resize(int capacity) {
+    T[] resizedArray = (T[]) new Object[capacity];
+    for (int i = 0; i < array.length; i++) {
+      resizedArray[i] = array[i];
+    }
+    array = resizedArray;
+  }
+
+  public T pop(T d) {
+    if (topIndex == -1) throw new EmptyStackException();
+    T item = top[topIndex];
+    top[topIndex--] == null;
+    if (topIndex > -1 && topIndex == top.length / 4)
+    return item;
+  }
+
+  public T peek() {
+    if (topIndex == -1) throw new EmptyStackException();
+    return top[topIndex];
+  }
+
+}
+```
 # Queue
+
+## Time Complexity
+
+| Operation    | Time Complexity |
+|--------------|-----------------|
+| add()              |       O(1)          |
+| remove()           |       O(1)          |
+| peek()             |       O(1)          |
+| isEmpty()          |       O(1)          |
+
+## Java Implementation
+### LinkedList Based
+```java
+class Queue<T> {
+  private static class QueueNode<T> {
+    T data;
+    QueueNode<T> next;
+    public QueueNode(T d) {
+      data = d;
+    }
+    private QueueNode<T> first;
+    private QueueNode<T> last;
+    public void add(T d) {
+      QueueNode item = new QueueNode<T>(d);
+      if (last != null) {
+        last.next = item;
+      }
+      last = item;
+      if (first == null) {
+        first = last;
+      }
+    }
+
+    public T remove() {
+      if (first == null) throw new EmptyStackException();
+      T data = first.data;
+      first = first.next;
+      if (first == null) {
+        last = null;
+      }
+      return data;
+    }
+
+    public T peek() {
+      if (first == null) throw new EmptyStackException();
+      return first.data;
+    }
+
+    public boolean isEmpty() {
+        return first == null;
+    }
+  }
+
+}
+```
+### Array Based
 # HashTable
+
+## Time Complexity
+
+| Operation    | Time Complexity |
+|--------------|-----------------|
+|   |          |
+## Java Implementation
+
 # Binary Tree
+
+## Time Complexity
+
+| Operation    | Time Complexity |
+|--------------|-----------------|
+|   |          |
+## Java Implementation
+
 # Graph
+
+## Time Complexity
+
+| Operation    | Time Complexity |
+|--------------|-----------------|
+|   |          |
+## Java Implementation
+
 # Heap
+
+## Time Complexity
+
+| Operation    | Time Complexity |
+|--------------|-----------------|
+|   |          |
+## Java Implementation
+
+# Doubly LinkedList
+
+## Time Complexity
+
+| Operation    | Time Complexity |
+|--------------|-----------------|
+|   |          |
+## Java Implementation
