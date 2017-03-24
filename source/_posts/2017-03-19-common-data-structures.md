@@ -13,7 +13,7 @@ Common data structures implementation using java
 ## Time Complexity
 | Operation    | Time Complexity |
 |--------------|-----------------|
-| appendToTail  |          `O(n)` |
+| appendToTail |          `O(n)` |
 
 ## Java Implementation
 
@@ -135,6 +135,7 @@ class Stack<T> {
 | isEmpty()          |       O(1)          |
 
 ## Java Implementation
+
 ### LinkedList Based
 ```java
 class Queue<T> {
@@ -179,7 +180,47 @@ class Queue<T> {
 
 }
 ```
+
 ### Array Based
+
+```java
+class Queue<T> {
+  int INITIAL_SIZE = 2;
+  int tail, head, total;
+  T[] array;
+
+  public Queue() {
+    array = (T[]) new Object[INITIAL_SIZE];
+  }
+
+  public void add(T d) {
+    if (total == array.length)  resize(2 * array.length);
+    array[tail++] = d;
+    if (tail == array.length) tail = 0;
+    tail = 0;
+  }
+
+  public T remove() {
+    if (total == 0) throw new EmptyQueueException();
+    T item = array[head];
+    array[head++] = null;
+    if (head == array.length) head = 0;
+    if (--total > 0 && total < array.length / 4) {
+      resize(array.length / 4);
+    }
+    return item;
+  }
+
+  public void resize(int capacity) {
+    T[] tmp = (T[]) new Object[capacity];
+    for (int i = 0; i < total; i++) {
+      tmp[i] = array[ (first + i) % array.length];
+    }
+    array = tmp;
+  }
+
+}
+```
 # HashTable
 
 ## Time Complexity
