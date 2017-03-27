@@ -234,11 +234,47 @@ class Queue<T> {
 
 ## Time Complexity
 
-| Operation    | Time Complexity |
+| Operation (Binary Search Tree)    | Time Complexity |
 |--------------|-----------------|
-|   |          |
+|               |          |
 ## Java Implementation
-
+### Defintion
+```java
+class TreeNode<T> {
+  TreeNode leftChild;
+  TreeNode rightChild;
+  T data;
+}
+```
+### Traversal
+#### Pre-order traversal
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sorted_binary_tree_preorder.svg/220px-Sorted_binary_tree_preorder.svg.png)
+Pre-order: F, B, A, D, C, E, G, I, H.
+```java
+public preOrderTraversal(TreeNode root) {
+  System.out.println(root.data);
+  preOrderTraversal(root.leftChild);
+  preOrderTraversal(root.rightChild);
+}
+```
+#### In-order traversal
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Sorted_binary_tree_inorder.svg/220px-Sorted_binary_tree_inorder.svg.png) In-order: A, B, C, D, E, F, G, H, I.
+```java
+public inOrderTraversal(TreeNode root) {
+  inOrderTraversal(root.leftChild);
+  System.out.println(root.data);
+  inOrderTraversal(root.rightChild);
+}
+```
+#### Post-order traversal
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sorted_binary_tree_postorder.svg/220px-Sorted_binary_tree_postorder.svg.png) Post-order: A, C, E, D, B, H, I, G, F.
+```java
+public postOrderTraversal(TreeNode root) {
+  postOrderTraversal(root.leftChild);
+  postOrderTraversal(root.rightChild);
+  System.out.println(root.data);
+}
+```
 # Graph
 
 ## Time Complexity
@@ -247,7 +283,16 @@ class Queue<T> {
 |--------------|-----------------|
 |   |          |
 ## Java Implementation
-
+### Adjacency list
+```java
+class GraphNode<T> {
+  T data;
+  T[] adjacency;
+}
+class Graph {
+  GraphNode[] nodes;
+}
+```
 # Heap
 
 ## Time Complexity
