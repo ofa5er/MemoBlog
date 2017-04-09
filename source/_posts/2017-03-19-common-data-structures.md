@@ -282,17 +282,80 @@ public postOrderTraversal(TreeNode root) {
 | Operation    | Time Complexity |
 |--------------|-----------------|
 |   |          |
-## Java Implementation
-### Adjacency list
+## Representation (Adjacency list)
+
 ```java
 class GraphNode<T> {
   T data;
-  T[] adjacency;
+  T[] neighbors;
+  boolean visited;
 }
 class Graph {
   GraphNode[] nodes;
 }
 ```
+
+## Search
+
+### Depth-First Search (DFS)
+
+- **Preferred to visit every node in the graph. (Simpler than BFS)**
+- Pre-order and other tree traversals are DFS algorithms.
+
+![](http://s29.postimg.org/ig2mj533r/Depth_FS.gif)
+
+#### Implementation in Java
+
+##### Recursive (most common)
+
+```java
+void Search (Node root) {
+  if (root == null) return;
+  visit(root);
+  root.visited = true;
+  for (n : root.neighbors) {
+    if (!n.visited) {
+      search(n);
+    }
+  }
+}
+```
+
+#### Iterative
+
+```java
+
+```
+
+### Breadth-First Search (BFS)
+
+- **Preferred to find the shortest path.**
+
+![](http://algorithms.tutorialhorizon.com/files/2015/05/Graph-BFS.gif)
+![](http://s29.postimg.org/qytzn2m7r/Breadth_FS.gif)
+
+#### Implementation in Java
+
+##### Iterative
+
+```java
+void search(Node root) {
+  Queue<Node> queue = new LinkedList<>();
+  root.marked = true;
+  queue.offer(root);
+
+  while (!queue.isEmpty()) {
+    Node r = queue.poll();
+    visit (r);
+    for (n : r.neighbors) {
+      if (!n.marked) {
+        queue.offer(n);
+      }
+    }
+  }
+}
+```
+
 # Heap
 
 ## Time Complexity
