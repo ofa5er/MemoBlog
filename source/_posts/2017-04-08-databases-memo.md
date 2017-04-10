@@ -51,3 +51,4 @@ If we know that we have to repeat this quey often we might store the teacher's n
 
 
 
+![](http://files.zeroturnaround.com/pdf/zt_sql_cheat_sheet.pdf) 

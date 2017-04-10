@@ -279,9 +279,10 @@ public postOrderTraversal(TreeNode root) {
 
 ## Time Complexity
 
-| Operation    | Time Complexity |
-|--------------|-----------------|
-|   |          |
+| Operation    | Time Complexity (Worst Case) |Space comlpexity (Worst Case)  |
+|--------------|------------------------------|-------------------------------|
+|  DFS         |  O(\|V\| + O(\|E\|)) = O(b^d)|  O(\|V\|) = O(b^d)            |
+|  BFS         |                              |              |
 ## Representation (Adjacency list)
 
 ```java
@@ -319,12 +320,6 @@ void Search (Node root) {
     }
   }
 }
-```
-
-#### Iterative
-
-```java
-
 ```
 
 ### Breadth-First Search (BFS)
