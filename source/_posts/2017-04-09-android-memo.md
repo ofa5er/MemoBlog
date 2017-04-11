@@ -14,7 +14,7 @@ Android memo
 
   - **Explicit intent**: Used to start an activity within the same application.
   
-  - **Action intent**: Implicit Intents do not directly specify the Android components which should be called, it only specifies actions to be performed.An Uri can be used with the implicit intent to specify data type.
+  - **Implicit intent**: Implicit Intents do not directly specify the Android components which should be called, it only specifies actions to be performed.An Uri can be used with the implicit intent to specify data type.
 
 ## What are launch modes in Android ?
 
