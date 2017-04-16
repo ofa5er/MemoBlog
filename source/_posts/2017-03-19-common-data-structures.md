@@ -7,6 +7,7 @@ tags:
 comments: true
 ---
 Common data structures implementation using java
+
 <!-- more -->
 # LinkedList
 
@@ -357,14 +358,85 @@ void search(Node root) {
 
 | Operation    | Time Complexity |
 |--------------|-----------------|
-|   |          |
+|              |                 |
+
 ## Java Implementation
 
 # Doubly LinkedList
 
+![](http://www.tech-faq.com/wp-content/uploads/doubly-linked-list_clip_image002.jpg)
 ## Time Complexity
 
 | Operation    | Time Complexity |
 |--------------|-----------------|
 |   |          |
 ## Java Implementation
+
+```java
+class Node<T> {
+  T data;
+  Node prev;
+  Node next;
+  public Node(T d) {
+    data = d;
+  }
+}
+class DoublyLinkedList<T> {
+  Node head;
+  Node tail;
+  int size;
+
+  public DoublyLinkedList(T data) {
+    tail = new Node(data);
+    head = tail;
+    sie = 1;
+  }
+
+  public void addtoHead(T data) {
+    Node n = new Node(data);
+    if (size == 0) {
+      head = n;
+      tail = n;
+    } else {
+      head.prev = n;
+      n.next = head;
+      head = n;
+    }
+  }
+
+  public void addtoTail(T data) {
+    Node n = new Node(data);
+    if (size == 0) {
+      head = n;
+      tail = n;
+    } else {
+      head.prev = n;
+      n.next = head;
+      head = n;
+    }
+  }
+
+  public T removeFromHead() {
+    if (size == 0) {
+      throw new EmptyException()
+    }
+    T result = head.data;
+    head = head.next;
+    head.prev = null;
+    return result;
+  }
+  public T removeFromTail() {
+    if (size == 0) {
+      throw new EmptyException()
+    }
+    T result = tail.data;
+    tail = tail.prev;
+    tail.next = null
+    return result;
+  }
+
+  public int size() {
+    return size;
+  }
+}
+```
