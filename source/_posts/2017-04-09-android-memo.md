@@ -131,3 +131,41 @@ It has a message queue and a handler that allows you to send an process runnable
 
 ## What is an AsyncTask ?
 Allows you to run a task on the background thread while publishing results to the UI thread.
+
+## How to passs the data to sub-activities in Android ?
+
+## How to start a new activity ?
+
+```java
+Intent i = new Intent(getApplicationContext(), ActivityTwo.class);  
+startActivity(i);  
+```
+
+## What is a content resolver ?
+The content resolver acts as intermediary between each app and the content provider or providersm it wants to access. It handles inter-process communication and keeps everything in sync and running smoothly.
+It has 4 methods:
+- Create
+- Read
+- Update
+- Delete
+
+## What is a fragement ?
+A class that represents a modular and reusable piece of activity
+
+## What are the different lifecycles whne the deivice is rotated ?
+onPause, onSaveInstanceState, onStop, onDestroy, onCreate, onStart, onResume
+
+## What is the Adapter responsible for ?
+
+## What is you favroite tool or library in Android ? Why is it so useful ?
+
+## You want to open a map app from an app that you’re building. The address, city, state, and ZIP code are provided by the user. What steps are involved in sending that data to a map app?
+
+## List and explain the differences between four different options you have for saving data while making an Android app. Pick one, and explain (without code) how you would implement it.
+
+## What are your thoughts about Fragments? Do you like or hate them? Why?
+
+## What is the UI thread ?
+
+## What is an AsyncTask ?
+
