@@ -169,3 +169,24 @@ onPause, onSaveInstanceState, onStop, onDestroy, onCreate, onStart, onResume
 
 ## What is an AsyncTask ?
 
+## I have an application and I need to be able to share data with other applications, How can I initially approach this ?
+If the data is unique to your app, I would use a content provider that interacts with some sort of data persistence on the backend (SQLLite, Shared Preferences). If you have a content provider that become accessible from other apps on your Android device using a URI. So you could call a content resolver to find where that URI come from and communciate with the content provider to manipulate the database. Either pull data or perhaps push data or update data.
+### What is a good example where a content provider would make sense ?
+A good example would be what comes already in Android wich is your contact list. So let's say that you would like to add a contact from some new way for example a website or a picture for example you take a pciture and you build the contact information from it. So using the contact resolver you access the address book and you push that contact into your contacts.
+### A problem that usually confuses new Android developers is for example if I have a progressBar and when I rotate the phone I loose that. Could examplain to me in detail why that is occuring ?
+This has to do with one of the fundamental concepts of Android development and the Android operating system which is the activity lifecycle or the fragment lifecycle as well. So when you create a fragment it's attached to your acitvity. When you rotate a device your activity is destroyed your fragment will be destroyed. So, if you don't have any sort of check to see if your activity has bee running. the activity will start again as if it was never runnining. So any data that changed during the lifecycle of the application will then start as new. The way around this is to in your oncreate method you check for a parameter called savedInstanceState. so, if savedInstancestate is not equal to null this means that your activity was running before it got to this point. There we can reference some data that we wanted to save and we can have it translate over the rotation with a new activity.
+### Suppose in this application maybe a game I have more than a simple primitive. I have more complex data so how can I pass it to the savedInstanceState ?
+There several way for example we could use a parcelable to send the complex data to the bundle. It is also possible to use some sort of persistance that supports complex objects like database. So, we check the savedInstanceState if it is not null we load again the data from the database. 
+
+We can also use Serlized class but it is much more slower that parcelable. So it is better to use Parcelable.
+
+## I finished developing this great application and what I notice that every now and then I get an ANR (application not responsive) and I have no idea what is happening ?
+There a lot of reasons for this to happen but mostly is caused by the fact of running a time consuming operation on the UI thread. Android Apps typically run on on threa and that is your UI thread. If you don't declare anything else, if you just running all your methods from on create or something like that oe calling methods from there. It's just running on one thread. and If you're running a really intensive process or maybe making a network call, if you don't get a different error you could get an ANR because you are overloading the UI thread.
+
+### So let's say that this application has a background service that runs a network call every 5 minutes. I still can't figure out why i am getting an ANR ?
+If you are running it from a normal service (not an intent service). It is normal to get ANR because network calls are time consuming and the service runs a UI thread this will cause definetly an ANR. To fix this you should move the network calls to an intentservice.
+
+## My application has list view in it and I noticed that as I started scrolling things start to not running in a smooth way. I noticed that I'am scrolling along and like it's just taking a while or it gets stuck. What are some things that I could do to start to debug those issues, what are some possible causes for that ?
+One possibe issue might be is that your data is not loading fast enough to your listView.
+## Let's suppost that I have all the data in memory ?
+One possible is that you are loading some complex data let's say big images that are not loaded fast enough. Another possible thing is that your views are not just getting resued fast enough. You can't load everything at once you need to load one item above and one item below and all the items in the screen and then reuse those. It is a common pattern that is used on a list view that has the name of RecyclerView. In list view before it wasn't enforced by system so you have to implement that by yourself.
