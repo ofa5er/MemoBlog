@@ -222,3 +222,15 @@ for(int i=0;i<N;i++)
     delete array[i];
 delete[] array;
 ```
+-------------------------------------------------------
+## Miscellaneous
+```cpp
+if (!root) {
+//Enter if root is not defined
+}
+
+if (root == NULL) {
+//Enter if root is not defined
+}
+
+```
