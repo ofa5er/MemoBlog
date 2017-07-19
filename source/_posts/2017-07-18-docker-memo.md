@@ -3,6 +3,8 @@ title: docker
 comments: true
 date: 2017-07-18 21:56:08
 tags:
+  - cheatsheet
+  - docker
 ---
 Docker
 <!-- more -->
