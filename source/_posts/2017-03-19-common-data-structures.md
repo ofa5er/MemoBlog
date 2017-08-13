@@ -9,6 +9,88 @@ comments: true
 Common data structures implementation using java
 
 <!-- more -->
+
+# Vector
+
+## Java Implementation
+
+```java
+class Vector<T> {
+  private T[] array;
+  private int size;
+  @SuppressWarnings("unchecked")
+  public Vector() {
+    array = (T[]) new Object[2];
+  }
+  public void add(T val) {
+    if (size >= array.length) {
+      resizeArray(size * 2);
+    }
+    array[size++] = val;
+  }
+  public void addAt(T value,int index) throws OutOfRangeException {
+    if (index >= size) {
+      throw new OutOfRangeException();
+    }
+
+    if (size == array.length) {
+      resizeArray(size * 2);
+    }
+  }
+  private void resizeArray(int newSize) {
+    @SuppressWarnings("unchecked")
+    T[] newArr = (T[]) new Object[newSize];
+    for (int i = 0; i < size; i++) {
+      newArr[i] = array[i];
+    }
+    array = newArr;
+  }
+  public T at(int index) throws EmptyStackException {
+    if (index >= size) {
+      throw new EmptyStackException();
+    }
+    return array[index];
+  }
+  public void remove() {
+    size--;
+    if (size < array.length/4) {
+      resizeArray(array.length / 2);
+    }
+  }
+  public T pop() {
+    T result = array[size - 1];
+    remove();
+    return result;
+  }
+  public boolean find(T val) {
+    for (int i = 0; i < size; i++) {
+      if (array[i] == val) {
+        return true;
+      }
+    }
+    return false;
+  }
+  public boolean isEmpty() {
+    return size == 0;
+  }
+
+  public int getSize() {
+    return size;
+  }
+  public String toString() {
+    if (size == 0) {
+      return "Vector is empty";
+    }
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < size; i++) {
+      sb.append(array[i].toString());
+      sb.append(",");
+    }
+    return sb.toString();
+  }
+}
+```
+
 # LinkedList
 
 ## Time Complexity

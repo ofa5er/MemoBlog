@@ -1,5 +1,5 @@
 ---
-title: Data Structures Implementations using C++
+title: C++ Data Structures Cheat Sheet
 date: 2017-02-17 08:05:28
 tags:
   - c++

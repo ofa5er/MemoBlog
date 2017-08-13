@@ -1,5 +1,5 @@
 ---
-title: virtualbox-memo
+title: Virtualbox Cheat Sheet
 comments: true
 date: 2017-08-05 13:10:08
 tags:

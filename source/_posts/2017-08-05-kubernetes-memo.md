@@ -1,5 +1,5 @@
 ---
-title: Kubernetes-memo
+title: Kubernetes Cheat Sheet
 comments: true
 date: 2017-08-05 13:14:18
 tags:

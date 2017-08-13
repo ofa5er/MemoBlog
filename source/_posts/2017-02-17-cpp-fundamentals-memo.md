@@ -1,12 +1,13 @@
 ---
-title: Common C++ APIs (Cheat sheet)
-date: 2017-02-17 08:09:05
-tags:
+title: C++ Fundamentals (Cheat sheet)
+date: 2017-02-17 08:04:46
+tags: 
   - c++
   - cheatsheet
+  - algorithms
 comments: true
 ---
-A CheatSheet for basic C++ APIs
+Basic C++ APIs cheat sheet
 <!-- more -->
 -------------------------------------------------------
 ## String
@@ -151,10 +152,16 @@ struct Employee
     int age;
     double wage;
 };
+
 Employee joe; // create an Employee struct for Joe
 joe.id = 14; // assign a value to member id within struct joe
 joe.age = 32; // assign a value to member age within struct joe
 joe.wage = 24.15; // assign a value to member wage within struct joe
+
+Employee* joe; 
+joe->id = 1 ;
+joe->age = 13;
+
 ```
 -------------------------------------------------------
 ## Threads
@@ -214,4 +221,16 @@ for (int i = 0; i < N; i++) {
 for(int i=0;i<N;i++)
     delete array[i];
 delete[] array;
+```
+-------------------------------------------------------
+## Miscellaneous
+```cpp
+if (!root) {
+//Enter if root is not defined
+}
+
+if (root == NULL) {
+//Enter if root is not defined
+}
+
 ```

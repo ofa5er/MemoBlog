@@ -8,3 +8,17 @@ comments: true
 ---
 A list of the most used linux commands
 <!-- more -->
+- cat
+- grep
+- sed
+- awk
+- curl
+- wget
+- sort
+- tr
+- uniq
+- tcpdump
+- traceroute
+- iptables
+- netstat
+- nslookup
