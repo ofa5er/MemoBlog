@@ -378,17 +378,24 @@ public postOrderTraversal(TreeNode root) {
 | Operation    | Time Complexity (Worst Case) |Space comlpexity (Worst Case)  |
 |--------------|------------------------------|-------------------------------|
 |  DFS         |  O(\|V\| + O(\|E\|)) = O(b^d)|  O(\|V\|) = O(b^d)            |
-|  BFS         |                              |              |
+|  BFS         |  O(\|V\| + O(\|E\|)) = O(b^d)|  O(\|V\|) = O(b^d)            |
 ## Representation (Adjacency list)
 
 ```java
-class GraphNode<T> {
-  T data;
-  T[] neighbors;
+class Node<T> {
   boolean visited;
+  ArrayList<Node> children;
+  T value;
+  public Node(T val) {
+    children = new ArrayList<Node>();
+    value = val;
+  }
 }
-class Graph {
-  GraphNode[] nodes;
+class Graph<T> {
+  ArrayList<Node<Integer>> nodes;
+  public Graph(){
+    nodes= new ArrayList<Node<Integer>>();
+  }
 }
 ```
 
@@ -406,14 +413,17 @@ class Graph {
 ##### Recursive (most common)
 
 ```java
-void Search (Node root) {
-  if (root == null) return;
-  visit(root);
-  root.visited = true;
-  for (n : root.neighbors) {
-    if (!n.visited) {
-      search(n);
+public boolean DFS(Node<Integer> root, int val) {
+    if (root == null) return false;
+    if (root.value == val) return true;
+    root.visited = true;
+    boolean result = false;
+    for ( Node<Integer> child : root.children) {
+      if ( !child.visited ) {
+        result |= DFS(child, val);
+      }
     }
+    return result;
   }
 }
 ```
@@ -430,21 +440,22 @@ void Search (Node root) {
 ##### Iterative
 
 ```java
-void search(Node root) {
-  Queue<Node> queue = new LinkedList<>();
-  root.marked = true;
-  queue.offer(root);
-
+public boolean BFS(Graph<Integer> g, int val) {
+  LinkedList<Node<Integer>> queue = new LinkedList<Node<Integer>>();
+  queue.add(g.nodes.get(0));
   while (!queue.isEmpty()) {
-    Node r = queue.poll();
-    visit (r);
-    for (n : r.neighbors) {
-      if (!n.marked) {
-        queue.offer(n);
+    Node<Integer> curNode = queue.remove();
+    curNode.visited = true;
+    for (Node<Integer> child : curNode.children) {
+      if (child.value == val) {
+        return true;
+      }
+      if (!child.visited) {
+        queue.add(child);
       }
     }
   }
-}
+  return false;
 ```
 
 # Heap
