@@ -315,11 +315,24 @@ class Queue<T> {
 
 # Binary Tree
 
+## Definitions
+
+- **Binary Search Tree**: All left descendants <= n < all right descendants
+
+- **Balanced Tree**: Not terribly unbalanced tree. It is balanced enough to ensure that insert and find are O(logn).
+
+- **Complete Binary Tree**: Every level is fully filled except the last.
+
+- **Full Binary Tree**: Every Node has node has 0 or 2 children.
+
+- **Perfect Binary Tree**: Full and Compete.
+
+
 ## Time Complexity
 
 | Operation (Binary Search Tree)    | Time Complexity |
 |--------------|-----------------|
-|               |          |
+|              |                 |
 ## Java Implementation
 ### Defintion
 ```java
