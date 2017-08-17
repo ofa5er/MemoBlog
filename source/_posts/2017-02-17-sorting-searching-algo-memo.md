@@ -43,6 +43,56 @@ public boolean binarySearch(int[] array, value) {
   return false;
 }
 ```
+
+# Insertion Sort
+| Quicksort                 |     Complexity     |
+|---------------------------|--------------------|
+| Worst-case performance    |      `O()`         |
+| Best-case performance     |      `O()`         |
+| Average-case performance  |      `O()`         |
+| Worst-case space          |      `O()`         |
+# Selection Sort
+| Quicksort                 |     Complexity     |
+|---------------------------|--------------------|
+| Worst-case performance    |      `O()`         |
+| Best-case performance     |      `O()`         |
+| Average-case performance  |      `O()`         |
+| Worst-case space          |      `O()`         |
+# Merge Sort
+![](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
+| Quicksort                 |     Complexity     |
+|---------------------------|--------------------|
+| Worst-case performance    |      `O()`      |
+| Best-case performance     |      `O()` |
+| Average-case performance  |      `O()`  |
+| Worst-case space          |      `O()`        |
+# Heapsort
+
+# Quicksort
+
+![](https://en.wikipedia.org/wiki/File:Sorting_quicksort_anim.gif)
+| Quicksort                 |     Complexity     |
+|---------------------------|--------------------|
+| Worst-case performance    |      `O(n^2)`      |
+| Best-case performance     |      `O(n log n )` |
+| Average-case performance  |      `O(n log n)`  |
+| Worst-case space          |      `O(n)`        |
+
+
+# Bubble sort
+| Quicksort                 |     Complexity     |
+|---------------------------|--------------------|
+| Worst-case performance    |      `O()`      |
+| Best-case performance     |      `O()` |
+| Average-case performance  |      `O()`  |
+| Worst-case space          |      `O()`        |
+# Shellsort
+| Quicksort                 |     Complexity     |
+|---------------------------|--------------------|
+| Worst-case performance    |      `O()`      |
+| Best-case performance     |      `O()` |
+| Average-case performance  |      `O()`  |
+| Worst-case space          |      `O()`        |
 # Graphs
 
 ```java

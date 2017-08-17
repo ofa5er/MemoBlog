@@ -442,7 +442,7 @@ public postOrderTraversal(TreeNode root) {
 
 ## Time Complexity
 
-| Operation    | Time Complexity (Worst Case) |Space comlpexity (Worst Case)  |
+| Operation    | Time Complexity (Worst Case) |Space complexity (Worst Case)  |
 |--------------|------------------------------|-------------------------------|
 |  DFS         |  O(\|V\| + O(\|E\|)) = O(b^d)|  O(\|V\|) = O(b^d)            |
 |  BFS         |  O(\|V\| + O(\|E\|)) = O(b^d)|  O(\|V\|) = O(b^d)            |
