@@ -137,6 +137,13 @@ System.out.println(tset); //[1, 2, 3, 4, 5]
 ## PriorityQueue
 
 ```java
+PriorityQueue<String> queue =new PriorityQueue<String>();
+queue.add (10);
+queue.add (12);
+queue.add (1);
+queue.add (8);
+
+
 ```
 
 ## LinkedList

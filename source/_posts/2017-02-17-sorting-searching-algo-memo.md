@@ -43,29 +43,89 @@ public boolean binarySearch(int[] array, value) {
   return false;
 }
 ```
+# Bubble Sort
+| Quicksort                 |     Complexity     |
+|---------------------------|--------------------|
+| Worst-case performance    |      `O(n^2)`      |
+| Best-case performance     |      `O(n)`        |
+| Average-case performance  |      `O(n^2)`      |
+| Worst-case space          |      `O(1)`        |
 
-# Insertion Sort
-| Quicksort                 |     Complexity     |
-|---------------------------|--------------------|
-| Worst-case performance    |      `O()`         |
-| Best-case performance     |      `O()`         |
-| Average-case performance  |      `O()`         |
-| Worst-case space          |      `O()`         |
+![](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
+
+- **Quick Description** : Swap pairs of items.
+- Advantages:
+  - 
+- Drawbacks:
+  - 
+
+# Implementation
+
+```java
+public void bubbleSort(int a[]) {
+  for (int i = a.length; i > 0; i--) {
+    for (int j = 0; j < i - 1; j++) {
+      if (a[j] > a[j+1]) {
+        int tmp = a[j];
+        a[j] = a[j+1];
+        a[j + 1] = tmp;
+      }
+    }
+  }
+}
+```
+
 # Selection Sort
+
 | Quicksort                 |     Complexity     |
 |---------------------------|--------------------|
-| Worst-case performance    |      `O()`         |
-| Best-case performance     |      `O()`         |
-| Average-case performance  |      `O()`         |
-| Worst-case space          |      `O()`         |
+| Worst-case performance    |      `O(n^2)`      |
+| Best-case performance     |      `O(n)` comparisons, O(1)      |
+| Average-case performance  |      `O(n^2)`      |
+| Worst-case space          |      `O(n)`        |
+
+![](https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif)
+
+- **Quick Description** : Find the Min and place it at the beginning.
+- Advantages:
+  - 
+- Drawbacks:
+  - 
+
+# Implementation
+
+```java
+  public void SelectionSort(int[] a) {
+    for (int i = 0; i < a.length ; i++) {
+      int tmp = a[i];
+      int minIdx = findMinIndex(a, i);
+      a[i] = a[minIdx];
+      a[minIdx] = tmp;
+    }
+  }
+  private int findMinIndex(int a[], int startIndex) {
+    int minIdx = startIndex;
+
+    for (int i = startIndex + 1; i < a.length; i++) {
+      if ( a[minIdx] >= a[i] ) {
+        minIdx = i;
+      }
+    }
+    return minIdx;
+  }
+```
+
+
 # Merge Sort
+
 ![](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
 | Quicksort                 |     Complexity     |
 |---------------------------|--------------------|
-| Worst-case performance    |      `O()`      |
-| Best-case performance     |      `O()` |
-| Average-case performance  |      `O()`  |
-| Worst-case space          |      `O()`        |
+| Worst-case performance    |      `O(n log n)`      |
+| Best-case performance     |      `O(n log n)` |
+| Average-case performance  |      `O(n)`  |
+| Worst-case space          |      `O(n)`        |
+
 # Heapsort
 
 # Quicksort
