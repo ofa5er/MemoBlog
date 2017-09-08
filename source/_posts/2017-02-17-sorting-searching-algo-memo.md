@@ -118,6 +118,14 @@ public void bubbleSort(int a[]) {
 
 # Merge Sort
 
+- **Quick Description** : Divides the array in half, sorts each of those halves, and then merges them back together. The merge method operates by copying all the elements from the target array segment into a helper array.
+
+- Advantages:
+  - 
+- Drawbacks:
+  - 
+
+
 ![](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
 | Quicksort                 |     Complexity     |
 |---------------------------|--------------------|
@@ -125,6 +133,56 @@ public void bubbleSort(int a[]) {
 | Best-case performance     |      `O(n log n)` |
 | Average-case performance  |      `O(n)`  |
 | Worst-case space          |      `O(n)`        |
+
+# Implementation
+
+```java
+  public static void mergeSort(int[] array) {
+    int[] helper = new int[array.length];
+    mergesort(array, helper, 0, array.length - 1);
+  }
+
+  private static void mergesort(int [] array, int[] helper, int low, int high) {
+    if (low < high) {
+      int mid = (low + high)/2;
+      mergesort(array, helper, low, mid); //Sort left half
+      mergesort(array, helper, mid+1, high); //Sort second half
+      merge(array, helper, low, mid, high); //Merge them
+    }
+  }
+
+  private static void merge(int[] array, int[] helper, int low, int mid, int high) {
+    // Copy both halves into a helper array
+    for (int i = low; i <= high; i++) {
+      helper[i] = array[i];
+    }
+
+    int helperLeft = low;
+    int helperRight = mid + 1;
+    int current = low;
+
+    /* Iterate though helper array. Compare the left and the right half, copying back 
+     * the smaller element from the two halves into the original array. */
+
+    while (helperLeft <= mid && helperRight <= high) {
+      if (helper[helperLeft] <= helper[helperRight]) {
+        array[current] = helper[helperLeft];
+        helperLeft++;
+      } else {
+        array[current] = helper[helperRight];
+        helperRight++;
+      }
+      current++;
+    }
+
+    // Copy the rest of the left sie of the array into the target array
+    int remaining = mid - helperLeft;
+    for (int i = 0; i <= remaining; i++) {
+      array[current + i] = helper[helperLeft + i];
+    }
+  }
+
+```
 
 # Heapsort
 

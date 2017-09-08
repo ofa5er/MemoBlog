@@ -33,13 +33,13 @@ public Cards[] shuffle(Card[] cards) {
 
 # Djikstra's Algortihm
 
+# A* Search Algorithm
+
 # AVL Tree
 
 # Red-Black Tree
 
 # Topological sort
-
-# A* Search Algorithm
 
 # Travelling Salesman Problem
 
@@ -64,3 +64,5 @@ public Cards[] shuffle(Card[] cards) {
 # Bipartite Graph
 
 # Regular Expressions
+
+# Floyd’s Cycle-Finding Algorithm

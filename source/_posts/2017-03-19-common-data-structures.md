@@ -510,6 +510,7 @@ public boolean DFS(Node<Integer> root, int val) {
 public boolean BFS(Graph<Integer> g, int val) {
   LinkedList<Node<Integer>> queue = new LinkedList<Node<Integer>>();
   queue.add(g.nodes.get(0));
+  g.nodes.get(0).visited = true;
   while (!queue.isEmpty()) {
     Node<Integer> curNode = queue.remove();
     curNode.visited = true;
@@ -518,6 +519,7 @@ public boolean BFS(Graph<Integer> g, int val) {
         return true;
       }
       if (!child.visited) {
+        child.visited = true;
         queue.add(child);
       }
     }
