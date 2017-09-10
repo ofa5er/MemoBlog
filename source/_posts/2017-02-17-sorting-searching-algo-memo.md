@@ -184,11 +184,12 @@ public void bubbleSort(int a[]) {
 
 ```
 
-# Heapsort
 
 # Quicksort
 
-![](https://en.wikipedia.org/wiki/File:Sorting_quicksort_anim.gif)
+![](https://www.tutorialspoint.com/data_structures_algorithms/images/quick_sort_partition_animation.gif)
+
+
 | Quicksort                 |     Complexity     |
 |---------------------------|--------------------|
 | Worst-case performance    |      `O(n^2)`      |
@@ -196,6 +197,47 @@ public void bubbleSort(int a[]) {
 | Average-case performance  |      `O(n log n)`  |
 | Worst-case space          |      `O(n)`        |
 
+
+## Implementation
+
+```java
+public void quickSort(int[] a) {
+  quickSort(a, 0, a.length);
+}
+
+private void quickSort(int[] a; int left, int right) {
+  if (left >= right) {
+    return;
+  }
+  int pivot = a[(left + right) / 2];
+  int index = partition(a, left, right, pivot)
+  quickSort(a, left, index);
+  quickSort(a, index + 1, right);
+}
+
+private void partition(int a[], int left, int right, int pivot) {
+  while (left < right) {
+    while (a[left] < pivot) {
+      left++;
+    }
+    while (a[right] > pivot) {
+      right--;
+    }
+    if ( left <= right ) {
+      swap(a, left, right);
+      left++;
+      right--;
+    }
+  }
+  return left;
+}
+
+private void swap(int a[], int left, int right) {
+  int tmp = a[left];
+  a[left] = a[right];
+  a[right] = tmp;
+}
+```
 
 # Bubble sort
 | Quicksort                 |     Complexity     |
@@ -230,6 +272,7 @@ class Graph<T> {
   }
 }
 ```
+# Heapsort
 
 ## Depth-First Search (DFS)
 
