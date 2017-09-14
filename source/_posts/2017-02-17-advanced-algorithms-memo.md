@@ -47,6 +47,8 @@ public Cards[] shuffle(Card[] cards) {
 
 # Rabin-Karp Substring Search
 
+# Knuth-Morris-Pratt
+
 # Bellman-Ford Algorithm
 
 # Floyd-Warshall Algorithm

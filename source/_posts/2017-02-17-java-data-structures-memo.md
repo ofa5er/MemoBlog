@@ -11,6 +11,7 @@ A CheatSheet for basic Java APIs
 <!-- more -->
 
 # BitSet
+
 ```java
 java.util.BitSet
 
@@ -43,7 +44,6 @@ Arrays.sort(iArr);
 ## ArrayList
 
 ```java
-
 ArrayList<Integer> array = new ArrayList<Integer>();
 array.add(10);
 array.add(index, 12);
@@ -59,7 +59,6 @@ array.get(index);
 ## LinkedList
 
 ```java
-
 LinkedList<Integer> ll = new LinkedList<Integer>(); 
 ll.add(122); //add at the end    - Queue
 ll.remove(); // remove from first  - Queue
@@ -95,7 +94,6 @@ hset.remove("Test");
 hset.clear();
 hset.isEmpty(); //return true
 hset.size(); //return size
-
 ```
 
 
@@ -131,7 +129,6 @@ System.out.println(tset); //[1, 2, 3, 4, 5]
 ```java
 ```
 
-
 # Queue
 
 ## PriorityQueue
@@ -142,25 +139,56 @@ queue.add (10);
 queue.add (12);
 queue.add (1);
 queue.add (8);
+while (!pq.isEmpty()) {
+    System.out.println(pq.poll()); // 1, 8, 10, 12
+}
 
 
+public class Test
+{
+    public static void main(String[] args)
+    {
+        Comparator<String> comparator = new StringLengthComparator();
+        PriorityQueue<String> queue = 
+            new PriorityQueue<String>(10, comparator);
+        queue.add("short");
+        queue.add("very long");
+        queue.add("medium");
+        while (queue.size() != 0)
+        {
+            System.out.println(queue.remove()); // Short, Medium, Very long
+        }
+    }
+}
+// StringLengthComparator.java
+import java.util.Comparator;
+public class StringLengthComparator implements Comparator<String>
+{
+    @Override
+    public int compare(String x, String y)
+    {
+        if (x.length() < y.length())
+        {
+            return -1;
+        }
+        if (x.length() > y.length())
+        {
+            return 1;
+        }
+        return 0;
+    }
+}
 ```
 
 ## LinkedList
 
-
 ```java
 ```
-
-
 
 ## ArrayDeque
 
-
 ```java
 ```
-
-
 
 # Map
 
@@ -172,7 +200,6 @@ import java.util.HashMap;
 HashMap<Integer, String> hmap = new HashMap<Integer, String>()
 hmap.put(12, "Test");
 hmap.get(12); // return "Test"
-
 
 //Iterate
 hmap.containsKey(12); // return True
@@ -197,15 +224,12 @@ hmap.size(); //return size
 
 ```
 
-
 ## TreeMap
-
 
 ```java
 ```
 
-
-List implementations:
+# List implementations:
 
 |                 |    get  |  add  | contains | next | remove(0) | iterator.remove|
 |-----------------|---------|-------|-----     |------|-----------|-------------------------|
