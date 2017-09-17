@@ -79,9 +79,9 @@ ll.sort((a, b) -> a.compareTo(b));
 ```java
 import java.util.HashSet;
 
-HashSet<String> hmap = new HashSet<String>()
-hset.put("Test");
-hset.containsKey("Test"); // return True
+HashSet<String> hset = new HashSet<String>()
+hset.add("Test");
+hset.contains("Test"); // return True
 //Iterate
 for (String s : hset) {
     System.out.println(s);
@@ -94,12 +94,16 @@ hset.remove("Test");
 hset.clear();
 hset.isEmpty(); //return true
 hset.size(); //return size
+
 ```
 
 
 ## LinkedHashSet
 
 ```java
+
+//TODO
+
 ```
 
 
@@ -122,11 +126,13 @@ while(itr.hasNext()){
 
 //Displaying TreeSet
 System.out.println(tset); //[1, 2, 3, 4, 5]
+
 ```
 
 ## EnumSet
 
 ```java
+//TODO
 ```
 
 # Queue
@@ -226,7 +232,11 @@ hmap.size(); //return size
 
 ## TreeMap
 
+Implementation of red black tree:
+ - A self balancing binary search tree
+
 ```java
+
 ```
 
 # List implementations:
