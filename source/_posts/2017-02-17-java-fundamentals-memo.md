@@ -93,6 +93,19 @@ public class NewClass {
 }
 # Read/Write
 
+```java
+BufferedReader br = new BufferedReader("file.txt");
+while ((thisLine = br.readLine()) != null) {
+    System.out.println(thisLine);
+}
+```
+
+```java
+BufferedWriter bw = new BufferedWriter(new FileWriter("/tmp/a.txt"));
+bw.write(text);
+bw.close();
+```
+
 # Threads
 
 # Generics
