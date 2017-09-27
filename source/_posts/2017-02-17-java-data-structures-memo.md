@@ -227,7 +227,8 @@ hmap.remove(12);
 hmap.clear();
 hmap.isEmpty(); //return true
 hmap.size(); //return size
-
+hmap.keySet().toArray(); // returns an array of keys
+hmap.values().toArray(); // returns an array of values
 ```
 
 ## TreeMap

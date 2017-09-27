@@ -315,12 +315,16 @@ public boolean BFS(Graph<Integer> g, int val) {
 ```
 
 ## Bidirectional BFS
+
 ### Used for ?
-- Get the shorest path for unweighted graph
-- Much faster than BFS (O(k^(d/2))
+
+- Get the shortest path for unweighted graph
+- Much faster than BFS ( O(k^(d/2) + O(k^(d/2) )
 
 ```java
-
+public LinkedList<Node> getShortestPath(Node start, Node end) {
+  
+}
 ```
 
 ## External Sort
