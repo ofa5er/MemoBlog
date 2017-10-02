@@ -29,6 +29,8 @@ str.substring(int being, int end); O(n)
 str.indexOf("ample");//Return index of first occurance, -1 if not found
 
 
+String str = "/home//a/b/c"
+String[] sr.split("/+");// [home, a, b, c]
 //Sort String
 char[] ar = str.toCharArray();
 Arrays.sort(ar);

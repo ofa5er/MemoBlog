@@ -53,6 +53,7 @@ array.toArray();
 array.indexOf(10);
 array.contains(10);
 array.get(index);
+array.set(index,30); //replace element
 
 ```
 
