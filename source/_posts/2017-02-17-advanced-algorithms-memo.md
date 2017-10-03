@@ -9,14 +9,26 @@ comments: true
 A cheat sheet for some known algortihms
 
 <!-- more -->
-# Knuth–Morris–Pratt algorithm
+
+# Interesting List of Algorithms and their explanation
+
+http://www.geeksforgeeks.org/fundamentals-of-algorithms/#PatternSearching 
+
+# Searching for Patterns
 
 Algortihm that retrun the position of string within another string:
 - Naive algorithm : worst-case : O(n*k)
+
+## Rabin-Karp
+
+- Rabin-Karp : worst-case O(n + k) (O(n) since k < n)
+- Algorithm explanation: http://www.geeksforgeeks.org/searching-for-patterns-set-3-rabin-karp-algorithm/
+
+## Knuth–Morris–Pratt algorithm
+
 - KMP : worst-case O(n + k) (O(n) since k < n)
 
-Algorithm explanation:
-http://www.geeksforgeeks.org/searching-for-patterns-set-2-kmp-algorithm/
+- Algorithm explanation: http://www.geeksforgeeks.org/searching-for-patterns-set-2-kmp-algorithm/
 
 # Knuth Shuffle ((a.k.a. the Fisher-Yates shuffle)
 
@@ -45,10 +57,6 @@ public Cards[] shuffle(Card[] cards) {
 
 # K-nearest neighbors algorithm (k-NN)
 
-# Rabin-Karp Substring Search
-
-# Knuth-Morris-Pratt
-
 # Bellman-Ford Algorithm
 
 # Floyd-Warshall Algorithm
@@ -68,3 +76,5 @@ public Cards[] shuffle(Card[] cards) {
 # Regular Expressions
 
 # Floyd’s Cycle-Finding Algorithm
+
+# Aho–Corasick algorithm
