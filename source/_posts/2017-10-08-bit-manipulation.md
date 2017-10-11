@@ -1,10 +1,12 @@
 ---
-title: bit-manipulation
+title: Bit Manipulation
 comments: true
 date: 2017-10-08 14:15:00
 tags:
+ - bit
+ - cheatsheet
 ---
-
+Bit Manipulation cheat sheet
 <!-- more -->
 
 # Bits counting algorithm (Brian Kernighan)
