@@ -22,3 +22,12 @@ int numberOf1Bits(int n) {
 }
 ```
 
+# Common Bit Tasks: Getting and Setting
+
+## Get Bit
+
+```java
+boolean getBit(int num, int i) {
+  return (((num & (1 << i))) != 0);
+}
+```
