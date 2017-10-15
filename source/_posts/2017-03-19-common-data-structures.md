@@ -222,7 +222,7 @@ class Stack<T> {
 ### LinkedList Based
 ```java
 class Queue<T> {
-  private static class QueueNode<T> {
+  private class QueueNode<T> {
     T data;
     QueueNode<T> next;
     public QueueNode(T d) {
@@ -231,28 +231,28 @@ class Queue<T> {
     private QueueNode<T> first;
     private QueueNode<T> last;
     public void add(T d) {
-      QueueNode item = new QueueNode<T>(d);
-      if (last != null) {
-        last.next = item;
-      }
-      last = item;
-      if (first == null) {
+      QueueNode<T> oldLast = last;
+      last.data = data;
+      last.next = oldLast;
+      if (isEmpty()) {
         first = last;
+      } else {
+        oldLast.next = last;
       }
+      size++;
     }
 
     public T remove() {
-      if (first == null) throw new EmptyStackException();
+      if (isEmpty()) throw new EmptyStackException();
       T data = first.data;
       first = first.next;
-      if (first == null) {
-        last = null;
-      }
+      n--;
+      if (isEmpty()) last = null;
       return data;
     }
 
     public T peek() {
-      if (first == null) throw new EmptyStackException();
+      if (isEmpty()) throw new EmptyStackException();
       return first.data;
     }
 
@@ -297,7 +297,7 @@ class Queue<T> {
   public void resize(int capacity) {
     T[] tmp = (T[]) new Object[capacity];
     for (int i = 0; i < total; i++) {
-      tmp[i] = array[ (first + i) % array.length];
+      tmp[i] = array[ (head + i) % array.length];
     }
     array = tmp;
   }
