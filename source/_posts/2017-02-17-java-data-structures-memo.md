@@ -26,7 +26,8 @@ b1.set(2,true); // change bit index 2 to 1;
 b1.cardinality( ); // return the number of 1
 b1.flip(5); // flip bit 5;
 b1.flip(0, b1.size() - 1); //flip all
-
+b1.get(2); // return true
+b1.get(0,2) // return 111
 int mask = (Integer.highestOneBit(num) << 1) - 1;
 
 ```

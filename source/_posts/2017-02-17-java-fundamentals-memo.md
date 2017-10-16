@@ -110,9 +110,86 @@ bw.close();
 
 # Threads
 
+2 possible ways to use threads in Java.
+## Implement Runnable
+
+- Class needs only to be runnable and doesn't need all the overhead of the Thread class
+
+- Class needs to inherit from another class (multiple inheritance is not supported in java)
+
+```java
+class MyThread implements Runnable {
+  public void run() {
+    //Do stuff
+    Thread.sleep(1000);
+  }
+}
+public static void main(String[] args) {
+  MyThread instance = new MyThread();
+  Thread thread = new Thread(instance);
+  thread.start()
+}
+```
+
+## Extend Thread
+
+```java
+class MyThread extends Thread {
+  public void run() {
+    //Do stuff
+    Thread.sleep(1000);
+  }
+}
+public static void main(String[] args) {
+  MyThread thread = new MyThread();
+  thread.start()
+}
+```
+
+## Synchronized Execution of code
+
+### Synchronized
+
+```java
+public class MyObject {
+  public synchronized void foo() {}
+}
+
+public class MyObject2 {
+  public void foo() {
+    synchronized(this) {
+      //Do stuff
+    }
+
+  }
+}
+```
+
+### Lock
+
+```java
+public class LockedATM {
+  private Lock lock;
+  
+  public LockedATM() {
+    lock = new ReentrantLock();
+  }
+  
+  public int withdraw() {
+    lock.lock();
+    //code to protect
+    lock.unlock();
+    return 123;
+  }
+  
+}
+```
+
 # Generics
+
+```java
 public class Node<T> {
   private Node next;
   private T item;
 }
-
+```

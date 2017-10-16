@@ -232,8 +232,9 @@ class Queue<T> {
     private QueueNode<T> last;
     public void add(T d) {
       QueueNode<T> oldLast = last;
+      last = new QueueNode<T>();
       last.data = data;
-      last.next = oldLast;
+      last.next = null;
       if (isEmpty()) {
         first = last;
       } else {

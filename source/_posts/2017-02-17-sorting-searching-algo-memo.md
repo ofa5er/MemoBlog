@@ -202,7 +202,7 @@ public void bubbleSort(int a[]) {
 
 ```java
 public void quickSort(int[] a) {
-  quickSort(a, 0, a.length);
+  quickSort(a, 0, a.length - 1);
 }
 
 private void quickSort(int[] a; int left, int right) {
