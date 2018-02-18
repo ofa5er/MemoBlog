@@ -30,3 +30,12 @@ Edit file, add and commit then push
 ```
 git push -u origin <sandbox/new_branch_name>
 ```
+# Remember credentials
+```
+git config --global credential.helper "cache --timeout=3600"
+```
+
+# Add a submodule
+```
+git submodule add -b 5.1 https://github.com/kamailio/kamailio
+```
