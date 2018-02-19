@@ -37,5 +37,10 @@ git config --global credential.helper "cache --timeout=3600"
 
 # Add a submodule
 ```
-git submodule add -b 5.1 https://github.com/kamailio/kamailio
+git submodule add -b <branch> <git repo>
 ```
+# Get submodule code
+```
+git submodule update --remote --init
+```
+
