@@ -45,8 +45,7 @@ docker rm CONTAINER_NAME
 ## Method 1 
 docker exec -it CONTAINER_NAME netstat -tunelp
 ## Method 2 
-docker inspect -f '{{.State.Pid}}' CONTAINER_NAME 
-sudo nsenter -t ID -n netstat -tunelp
+sudo nsenter -t `docker inspect -f '{{.State.Pid}}' kamailio` -n netstat -tunelp
 ```
 
 ### DockerFile
@@ -80,10 +79,11 @@ docker-compose down
 ### Docker Compose YML
 ```
 ---
-version: "2"
+version: "3"
 
 services:
   our-app:
+    container_name: NAME
     build: ./service_providers
     environment:
       - MODE=dev
