@@ -44,3 +44,8 @@ git submodule add -b <branch> <git repo>
 git submodule update --remote --init
 ```
 
+# Remove Remote Branch
+```
+git push <remote_name> --delete <branch_name>
+```
+
