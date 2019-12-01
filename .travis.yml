@@ -5,11 +5,11 @@ git:
 cache:
   directories:
   - node_modules #cache models to speed up the build
-install:
+before_install:
   - npm install -g hexo-cli
   - npm install -g firebase-tools
   - npm install hexo --save
-script:
- - hexo clean && hexo generate --debug
+install:
+ - hexo clean && hexo generate
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
