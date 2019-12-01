@@ -10,4 +10,4 @@ install:
 script:
 - hexo generate
 after_success:
-  - firebase deploy --project memoblog-19b5a --token $FIREBASE_TOKEN
+  - firebase deploy --token $FIREBASE_TOKEN

@@ -8,5 +8,4 @@ production/
 .deploy*/
 .vscode/settings.json
 .firebase/
-.firebaserc
 package-lock.json
