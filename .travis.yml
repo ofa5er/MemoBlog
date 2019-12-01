@@ -12,6 +12,6 @@ before_install:
 install:
   - npm install
 script:
- - hexo clean && hexo generate --debug
+ - hexo clean && hexo generate -d
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
