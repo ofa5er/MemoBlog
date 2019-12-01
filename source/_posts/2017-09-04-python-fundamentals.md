@@ -7,4 +7,5 @@ tags:
  - cheatsheet
 ---
 Python fundamentals
+....
 <!-- more -->
