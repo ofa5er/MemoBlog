@@ -1,5 +1,7 @@
 language: node_js
 node_js: stable
+git:
+  submodules: true
 cache:
   directories:
   - node_modules #cache models to speed up the build
