@@ -1,5 +1,5 @@
 ---
-title: gallery
+title: Gallery
 comments: true
 tags:
  - photo
