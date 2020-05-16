@@ -14,9 +14,10 @@ Add this line to your `~/.vimrc` to add spell checking and automatic wrapping at
 ```
 autocmd Filetype gitcommit setlocal spell textwidth=72
 ```
-# Awsome commit message 
-http://udacity.github.io/git-styleguide/ 
-
+# Good ressources
+- http://udacity.github.io/git-styleguide/ 
+- https://victoria.dev/blog/git-commit-practices-your-future-self-will-thank-you-for/
+- https://chris.beams.io/posts/git-commit/
 # Remove Local Branch
 ```
 git branch -d the_local_branch
